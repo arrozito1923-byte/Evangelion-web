@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Genesis Evangelion</title>
+<title>Lore y Teorías - Neon Genesis Evangelion</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,190 +11,194 @@
 <style>
 
 /* =========================
-   VARIABLES DE COLOR
+VARIABLES
 ========================= */
+
 :root{
-    --bg:#0d0d0d;
-    --text:#ffffff;
-    --primary:#ff3b3b;
-    --secondary:#ff7a18;
-    --card:#1b1b1b;
+--bg:#0d0d0d;
+--text:#ffffff;
+--primary:#ff3b3b;
+--secondary:#ff7a18;
+--card:#1b1b1b;
 }
 
-/* MODO CLARO */
 .light-mode{
-    --bg:#f4f4f4;
-    --text:#111;
-    --primary:#c20000;
-    --secondary:#ff7a18;
-    --card:#ffffff;
+--bg:#f4f4f4;
+--text:#111;
+--primary:#c20000;
+--secondary:#ff7a18;
+--card:#ffffff;
 }
 
 /* =========================
-   ESTILO GENERAL
+ESTILO GENERAL
 ========================= */
+
 body{
-    margin:0;
-    font-family:'Roboto', sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    scroll-behavior:smooth;
+margin:0;
+font-family:'Roboto',sans-serif;
+background:var(--bg);
+color:var(--text);
+scroll-behavior:smooth;
 }
 
 h1,h2{
-    font-family:'Orbitron', sans-serif;
+font-family:'Orbitron',sans-serif;
 }
 
 section{
-    padding:80px 10%;
+padding:80px 10%;
 }
 
 /* =========================
-   HEADER
+HEADER
 ========================= */
+
 header{
-    background:linear-gradient(90deg,#000,#300000);
-    padding:20px;
-    position:sticky;
-    top:0;
-    z-index:100;
+background:linear-gradient(90deg,#000,#300000);
+padding:20px;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
-    padding:0;
+list-style:none;
+display:flex;
+gap:20px;
+padding:0;
 }
 
 nav a{
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    transition:.3s;
+text-decoration:none;
+color:white;
+transition:.3s;
 }
 
 nav a:hover{
-    color:var(--secondary);
+color:var(--secondary);
 }
 
 .title{
-    font-size:2rem;
+font-size:1.8rem;
+}
+
+.mode-btn{
+background:var(--secondary);
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* =========================
-   INTRO
+INTRO
 ========================= */
+
 .hero{
-    text-align:center;
-    padding:100px 10%;
+text-align:center;
+padding:100px 10%;
 }
 
 .hero h1{
-    font-size:3rem;
-    color:var(--primary);
+font-size:3rem;
+color:var(--primary);
 }
 
 /* =========================
-   CARDS PERSONAJES
+CARDS
 ========================= */
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-    background:var(--card);
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 10px 20px rgba(0,0,0,.4);
-    transition:.4s;
+background:var(--card);
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,.4);
+overflow:hidden;
+transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
+transform:translateY(-10px) scale(1.03);
 }
 
 .card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:20px;
+padding:20px;
 }
 
 /* =========================
-   BOTON VOLVER ARRIBA
+SCROLL ANIMATION
 ========================= */
-#topBtn{
-    position:fixed;
-    bottom:40px;
-    right:30px;
-    background:var(--primary);
-    color:white;
-    border:none;
-    padding:12px 16px;
-    border-radius:50%;
-    font-size:18px;
-    cursor:pointer;
-    display:none;
-}
 
-/* =========================
-   BOTON MODO
-========================= */
-.mode-btn{
-    background:var(--secondary);
-    border:none;
-    padding:8px 14px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-    text-align:center;
-    padding:30px;
-    background:#000;
-}
-
-/* =========================
-   ANIMACIONES SCROLL
-========================= */
 .reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
 
 .reveal.active{
-    opacity:1;
-    transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
 /* =========================
-   RESPONSIVE
+BOTON ARRIBA
 ========================= */
+
+#topBtn{
+position:fixed;
+bottom:40px;
+right:30px;
+background:var(--primary);
+color:white;
+border:none;
+padding:12px 16px;
+border-radius:50%;
+font-size:18px;
+cursor:pointer;
+display:none;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2rem;
+font-size:2rem;
 }
 
 nav{
-    flex-direction:column;
-    gap:10px;
+flex-direction:column;
+gap:10px;
 }
 
 }
@@ -205,19 +209,20 @@ nav{
 <body>
 
 <!-- =========================
-     HEADER
+HEADER
 ========================= -->
+
 <header>
 
 <nav>
 
-<div class="title">Evangelion</div>
+<div class="title">Evangelion Lore</div>
 
 <ul>
 <li><a href="#inicio">Inicio</a></li>
-<li><a href="#personajes">Personajes</a></li>
-<li><a href="#historia">Historia</a></li>
-<li><a href="#curiosidades">Curiosidades</a></li>
+<li><a href="#lore">Lore</a></li>
+<li><a href="#organizaciones">Organizaciones</a></li>
+<li><a href="#teorias">Teorías</a></li>
 </ul>
 
 <button class="mode-btn" onclick="toggleMode()">Modo</button>
@@ -226,88 +231,90 @@ nav{
 
 </header>
 
-
 <!-- =========================
-     INTRODUCCION
+INTRO
 ========================= -->
+
 <section class="hero reveal" id="inicio">
 
-<h1>Neon Genesis Evangelion</h1>
+<h1>Lore de Neon Genesis Evangelion</h1>
 
 <p>
-Neon Genesis Evangelion es uno de los animes más influyentes de la historia.
-Fue creado por <strong>Hideaki Anno</strong> y producido por el estudio <strong>Gainax</strong> en 1995.
-La serie combina ciencia ficción, acción y psicología profunda,
-explorando temas como la identidad, la soledad y el conflicto humano.
+El universo de Evangelion es una de las historias más complejas del anime.
+La serie creada por Hideaki Anno mezcla ciencia ficción, religión,
+filosofía y psicología para contar una historia sobre la humanidad,
+la soledad y la evolución de la especie humana.
 </p>
 
 </section>
 
-
 <!-- =========================
-     HISTORIA
+LORE
 ========================= -->
-<section class="reveal" id="historia">
 
-<h2>Historia</h2>
+<section class="reveal" id="lore">
+
+<h2>Origen del Mundo</h2>
 
 <p>
-La historia ocurre después de una catástrofe mundial llamada "Segundo Impacto".
-Extrañas criaturas conocidas como <strong>Ángeles</strong> comienzan a atacar la Tierra.
+En el universo de Evangelion, hace millones de años una raza ancestral
+llamada la Primera Raza Ancestral envió "Semillas de la Vida" a distintos
+planetas del universo para crear nuevas formas de vida.
 </p>
 
 <p>
-Para combatirlos, la organización secreta <strong>NERV</strong> crea gigantes biomecánicos
-llamados <strong>EVAs (Evangelion)</strong>, que solo pueden ser pilotados por adolescentes
-especialmente seleccionados.
+Dos de estas semillas llegaron a la Tierra:
+<strong>Adam</strong> y <strong>Lilith</strong>.
 </p>
 
 <p>
-El protagonista, Shinji Ikari, es reclutado por su padre para pilotar el EVA-01
-y defender la ciudad de Tokio-3 contra los Ángeles.
+Adam es el origen de los Ángeles,
+mientras que Lilith es el origen de la humanidad,
+también conocida como los "Lilin".
 </p>
 
 </section>
 
-
 <!-- =========================
-     PERSONAJES
+ORGANIZACIONES
 ========================= -->
-<section id="personajes" class="reveal">
 
-<h2>Personajes Principales</h2>
+<section class="reveal" id="organizaciones">
+
+<h2>Organizaciones Clave</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://i.imgur.com/0SvOlz2.jpeg">
 <div class="card-content">
-<h3>Shinji Ikari</h3>
-<p>El protagonista de la serie. Un joven introvertido que es elegido para pilotar el EVA-01.</p>
+<h3>NERV</h3>
+<p>
+Una organización paramilitar encargada de defender a la humanidad
+contra los Ángeles usando las unidades Evangelion.
+Su base se encuentra bajo la ciudad de Tokio-3.
+</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/kBx7yhV.jpeg">
 <div class="card-content">
-<h3>Rei Ayanami</h3>
-<p>La misteriosa piloto del EVA-00. Es reservada y parece ocultar muchos secretos.</p>
+<h3>SEELE</h3>
+<p>
+Una organización secreta que manipula los eventos globales
+para cumplir una profecía conocida como el Proyecto de
+Instrumentalización Humana.
+</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/z6f8Pg7.jpeg">
 <div class="card-content">
-<h3>Asuka Langley</h3>
-<p>Piloto del EVA-02. Es competitiva, segura de sí misma y muy talentosa.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://i.imgur.com/LHMaHtk.jpeg">
-<div class="card-content">
-<h3>Misato Katsuragi</h3>
-<p>Oficial de operaciones en NERV y tutora de Shinji. Es una líder estratégica.</p>
+<h3>Proyecto de Instrumentalización</h3>
+<p>
+Un plan destinado a fusionar todas las almas humanas
+en una sola existencia colectiva para eliminar
+el sufrimiento individual.
+</p>
 </div>
 </div>
 
@@ -315,53 +322,85 @@ y defender la ciudad de Tokio-3 contra los Ángeles.
 
 </section>
 
-
 <!-- =========================
-     CURIOSIDADES
+TEORIAS
 ========================= -->
-<section id="curiosidades" class="reveal">
 
-<h2>Curiosidades</h2>
+<section class="reveal" id="teorias">
 
-<ul>
-<li>Evangelion cambió la forma en que se escriben las historias en el anime moderno.</li>
-<li>Su final original fue muy polémico y generó debate entre los fans.</li>
-<li>Posteriormente se crearon películas como "The End of Evangelion".</li>
-<li>También existen nuevas películas llamadas "Rebuild of Evangelion".</li>
-<li>La serie mezcla referencias religiosas, psicológicas y filosóficas.</li>
-</ul>
+<h2>Teorías de Evangelion</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Shinji ya vivió el ciclo</h3>
+<p>
+Una teoría popular dice que la historia de Evangelion
+es un ciclo que se repite múltiples veces,
+especialmente en las películas Rebuild.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Rei representa la humanidad</h3>
+<p>
+Muchos fans creen que Rei simboliza la conexión entre
+la humanidad y Lilith, siendo una figura que une
+el destino de todos los humanos.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Los EVAs son más humanos que máquinas</h3>
+<p>
+Los Evangelion no son robots,
+sino organismos vivos clonados a partir de Adam o Lilith,
+lo que explica su comportamiento casi humano.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>El final ocurre dentro de la mente</h3>
+<p>
+Otra teoría sugiere que el final original del anime
+representa un proceso psicológico interno de Shinji
+durante la Instrumentalización.
+</p>
+</div>
+</div>
+
+</div>
 
 </section>
 
-
 <!-- =========================
-     FOOTER
+FOOTER
 ========================= -->
+
 <footer>
 
 <p>Página creada para proyecto educativo</p>
-
 <p id="year"></p>
 
 </footer>
 
-
-<!-- BOTON VOLVER ARRIBA -->
 <button id="topBtn" onclick="topFunction()">↑</button>
-
 
 <script>
 
-/* =========================
-   AÑO AUTOMATICO
-========================= */
+/* Año automático */
+
 document.getElementById("year").innerHTML =
 "© " + new Date().getFullYear();
 
-
-/* =========================
-   BOTON VOLVER ARRIBA
-========================= */
+/* Botón volver arriba */
 
 let topBtn = document.getElementById("topBtn");
 
@@ -382,19 +421,13 @@ document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
 
-
-/* =========================
-   CAMBIAR MODO CLARO/OSCURO
-========================= */
+/* Modo oscuro / claro */
 
 function toggleMode(){
 document.body.classList.toggle("light-mode");
 }
 
-
-/* =========================
-   ANIMACION SCROLL
-========================= */
+/* Animación al hacer scroll */
 
 function reveal(){
 
